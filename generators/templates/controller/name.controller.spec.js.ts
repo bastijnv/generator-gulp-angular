@@ -1,31 +1,15 @@
+import { <%= classedName %>Controller } from './<%= cameledName %>.controller';
+
 describe('controllers', () => {
-  let mainController: MainController;
+  let <%= cameledName %>Controller: <%= classedName %>Controller;
 
-  beforeEach(angular.mock.module('gulpAngularTest'));
+  beforeEach(angular.mock.module('<%= scriptAppName %>'));
 
-  beforeEach(inject(($controller: angular.IControllerService, webDevTec: WebDevTecService, toastr: any) => {
-    webDevTec.data = [null, null, null, null, null];
-    spyOn(toastr, 'info').and.callThrough();
-
-    mainController = $controller('MainController');
+  beforeEach(inject(($controller: angular.IControllerService) => {
+    <%= cameledName %>Controller = $controller('<%= classedName %>Controller');
   }));
 
-  it('should have a timestamp creation date', () => {
-    expect(mainController.creationDate > 0).toBeTruthy();
-  });
-
-  it('should define animate class after delaying timeout ', inject(($timeout: angular.ITimeoutService) => {
-    $timeout.flush();
-    expect(mainController.classAnimation).toEqual('rubberBand');
-  }));
-
-  it('should show a Toastr info and stop animation when invoke showToastr()', inject((toastr: any) => {
-    mainController.showToastr();
-    expect(toastr.info).toHaveBeenCalled();
-    expect(mainController.classAnimation).toEqual('');
-  }));
-
-  it('should define more than 5 awesome things', () => {
-    expect(mainController.awesomeThings.length === 5).toBeTruthy();
+  it('should have a welcome message', () => {
+    expect(<%= classedName %>Controller.welcomeMessage).toEqual('Hello world!');
   });
 });
