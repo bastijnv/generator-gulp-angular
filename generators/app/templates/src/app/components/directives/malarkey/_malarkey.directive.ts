@@ -1,4 +1,4 @@
-import { GithubContributor } from '../githubContributor/githubContributor.service';
+import { GithubContributor } from '../../factories/githubContributor/githubContributor.service';
 
 interface IProjectsScope extends angular.IScope {
   extraValues: any[];
@@ -57,7 +57,7 @@ export class MalarkeyController {
   public contributors: any[];
 
 
-  constructor(private $log: angular.ILogService, private githubContributor: GithubContributor, private malarkey: any) {
+  constructor(private $log: angular.ILogService, private githubContributor: GithubContributor, public malarkey: any) {
     this.contributors = [];
 
     this.activate();

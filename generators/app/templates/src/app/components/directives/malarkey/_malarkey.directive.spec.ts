@@ -1,5 +1,5 @@
 import { MalarkeyController } from './malarkey.directive';
-import { GithubContributor } from '../githubContributor/githubContributor.service';
+import { GithubContributor } from '../../factories/githubContributor/githubContributor.service';
 
 /**
  * @todo Complete the test

@@ -8,8 +8,8 @@ module.exports = function (GulpAngularGenerator) {
    */
   GulpAngularGenerator.prototype.uiFiles = function uiFiles() {
     this.files.push({
-      src: 'src/app/components/navbar/__' + this.props.ui.key + '-navbar.html',
-      dest: 'src/app/components/navbar/navbar.html',
+      src: 'src/app/components/directives/navbar/__' + this.props.ui.key + '-navbar.html',
+      dest: 'src/app/components/directives/navbar/navbar.html',
       template: false
     });
 
@@ -28,14 +28,14 @@ module.exports = function (GulpAngularGenerator) {
     });
 
     this.files.push({
-      src: 'src/app/components/malarkey/__malarkey.' + this.props.cssPreprocessor.extension,
-      dest: 'src/app/components/malarkey/malarkey.' + this.props.cssPreprocessor.extension,
+      src: 'src/app/components/directives/malarkey/__malarkey.' + this.props.cssPreprocessor.extension,
+      dest: 'src/app/components/directives/malarkey/malarkey.' + this.props.cssPreprocessor.extension,
       template: false
     });
 
     this.files.push({
-      src: 'src/app/components/navbar/__navbar.' + this.props.cssPreprocessor.extension,
-      dest: 'src/app/components/navbar/navbar.' + this.props.cssPreprocessor.extension,
+      src: 'src/app/components/directives/navbar/__navbar.' + this.props.cssPreprocessor.extension,
+      dest: 'src/app/components/directives/navbar/navbar.' + this.props.cssPreprocessor.extension,
       template: false
     });
   };

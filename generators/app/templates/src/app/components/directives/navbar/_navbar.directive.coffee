@@ -10,7 +10,7 @@ angular.module '<%- appName %>'
 
     directive =
       restrict: 'E'
-      templateUrl: 'app/components/navbar/navbar.html'
+      templateUrl: 'app/components/directives/navbar/navbar.html'
       scope: creationDate: '='
       controller: NavbarController
       controllerAs: 'vm'

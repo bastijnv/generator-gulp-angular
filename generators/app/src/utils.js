@@ -56,8 +56,29 @@ function replacePrefix(filePath, folderPairs) {
   }
 }
 
+function copyTemplates (self, type, templateDir, configName) {
+  templateDir = templateDir || path.join(self.sourceRoot(), type);
+  configName = configName || type + 'Templates';
+
+  if(self.config.get(configName)) {
+    templateDir = path.join(process.cwd(), self.config.get(configName));
+  }
+  fs.readdirSync(templateDir)
+    .forEach(function(template) {
+      var processedName = createFileName(template, self.name);
+
+      var fileName = processedName.name;
+      var templateFile = path.join(templateDir, template);
+
+      if(templateIsUsable(processedName, self)) {
+        self.fs.copyTpl(templateFile, path.join(self.dir, fileName), self);
+      }
+    });
+};
+
 module.exports = {
   isAbsolutePath: isAbsolutePath,
   normalizePath: normalizePath,
+  copyTemplates: copyTemplates,
   replacePrefix: replacePrefix
 };

@@ -1,5 +1,5 @@
 import { MainController } from './main.controller';
-import { WebDevTecService } from '../components/webDevTec/webDevTec.service';
+import { WebDevTecService } from '../components/services/webDevTec/webDevTec.service';
 
 describe('controllers', () => {
   let mainController: MainController;

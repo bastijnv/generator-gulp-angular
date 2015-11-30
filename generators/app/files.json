@@ -45,13 +45,13 @@
     "src/index.html",
     "src/app/main/main.controller.js",
     "src/app/main/main.controller.spec.js",
-    "src/app/components/navbar/navbar.directive.js",
-    "src/app/components/navbar/navbar.directive.spec.js",
-    "src/app/components/malarkey/malarkey.directive.js",
-    "src/app/components/malarkey/malarkey.directive.spec.js",
-    "src/app/components/webDevTec/webDevTec.service.js",
-    "src/app/components/webDevTec/webDevTec.service.spec.js",
-    "src/app/components/githubContributor/githubContributor.service.js",
-    "src/app/components/githubContributor/githubContributor.service.spec.js"
+    "src/app/components/directives/navbar/navbar.directive.js",
+    "src/app/components/directives/navbar/navbar.directive.spec.js",
+    "src/app/components/directives/malarkey/malarkey.directive.js",
+    "src/app/components/directives/malarkey/malarkey.directive.spec.js",
+    "src/app/components/services/webDevTec/webDevTec.service.js",
+    "src/app/components/services/webDevTec/webDevTec.service.spec.js",
+    "src/app/components/factories/githubContributor/githubContributor.service.js",
+    "src/app/components/factories/githubContributor/githubContributor.service.spec.js"
   ]
 }

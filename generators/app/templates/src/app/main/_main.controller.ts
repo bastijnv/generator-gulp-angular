@@ -1,4 +1,4 @@
-import { WebDevTecService, ITecThing } from '../components/webDevTec/webDevTec.service';
+import { WebDevTecService, ITecThing } from '../components/services/webDevTec/webDevTec.service';
 
 export class MainController {
   public awesomeThings: ITecThing[];

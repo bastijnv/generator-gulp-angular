@@ -6,7 +6,7 @@ export function acmeNavbar(): angular.IDirective {
     scope: {
       creationDate: '='
     },
-    templateUrl: 'app/components/navbar/navbar.html',
+    templateUrl: 'app/components/directives/navbar/navbar.html',
     controller: NavbarController,
     controllerAs: 'vm',
     bindToController: true
