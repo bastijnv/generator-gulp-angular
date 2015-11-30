@@ -1,6 +1,6 @@
 'use strict';
 var path = require('path');
-require('./src/files')(GulpAngularGenerator);
+var util = require('util');
 var ngUtil = require('../util');
 var ScriptBase = require('../script-base.js');
 
@@ -15,17 +15,17 @@ Generator.prototype.prompting = function askFor() {
   var done = this.async();
   var prompts = [{
     name: 'moduleName',
-    message: 'What module name would you like to use?',
-    default: self.appName + '.' + self.name,
+    message: 'What module name would you like to use? (only chance when you know what you are doing!)',
+    default: self.scriptAppName,
     when: function() {return self.config.get('modulePrompt');}
   }, {
     name: 'dir',
     message: 'Where would you like to create this controller?',
-    default: this.props.paths.src
+    default: self.config.get('routeDirectory')
   }];
 
   this.prompt(prompts, function (props) {
-    self.appName = props.moduleName || self.appName;
+    self.scriptAppName = props.moduleName || self.scriptAppName;
     self.dir = path.join(props.dir, self.name);
     done();
   });
