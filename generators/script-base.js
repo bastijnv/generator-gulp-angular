@@ -83,6 +83,7 @@ var Generator = module.exports = function Generator() {
   // somehow these variable aren't taken from above, force again.
   this.config.set('basePath', 'src/');
   this.config.set('factoryDirectory', 'src/app/components/factories/');
+  this.config.set('routeDirectory', 'src/app/');
 };
 
 util.inherits(Generator, yeoman.generators.NamedBase);
