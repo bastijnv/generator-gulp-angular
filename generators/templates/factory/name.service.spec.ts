@@ -1,20 +1,22 @@
-/// <reference path="../../../app/scripts/services/<%= cameledName.toLowerCase() %>.ts" />
+import { <%= classedName %> } from './<%= cameledName %>.service';
 
 'use strict';
 
 describe('Service: <%= cameledName %>', () => {
 
-  // load the service's module
-  beforeEach(module('<%= scriptAppName %>'));
+  // load the factory's module
+  beforeEach(angular.mock.module('<%= scriptAppName %>'));
 
-  // instantiate service
-  var <%= cameledName %>;
-  beforeEach(inject(_<%= cameledName %>_ => {
-    <%= cameledName %> = _<%= cameledName %>_;
+  it('should be registered', inject((<%= cameledName %>: <%= classedName %>) => {
+    expect(<%= cameledName %>).not.toBeNull();
   }));
 
-  it('should do something', () => {
-    expect(!!<%= cameledName %>).toBe(true);
+  describe('getContributors function', () => {
+    it('should return the meaning of life', inject((<%= cameledName %>: <%= classedName %>) => {
+      expect(<%= cameledName %>.getMeaningOfLife()).toEqual(42);
+    }));
+
   });
 
 });
+
