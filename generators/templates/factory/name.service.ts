@@ -1,6 +1,6 @@
 'use strict';
 
-export class <%= classedName %> {
+export class <%= classedName %>Factory {
   public meaningOfLife : number;
   constructor () {
     this.meaningOfLife = 42;
