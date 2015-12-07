@@ -8,10 +8,10 @@ import { routerConfig } from './index.route';
 <% } -%>
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
-import { GithubContributor } from 'components/factories/githubContributor/githubContributor.service';
-import { WebDevTecService } from 'components/services/webDevTec/webDevTec.service';
-import { acmeNavbar } from 'components/directives/navbar/navbar.directive';
-import { acmeMalarkey } from 'components/directives/malarkey/malarkey.directive';
+import { GithubContributor } from './components/factories/githubContributor/githubContributor.service';
+import { WebDevTecService } from './components/services/webDevTec/webDevTec.service';
+import { acmeNavbar } from './components/directives/navbar/navbar.directive';
+import { acmeMalarkey } from './components/directives/malarkey/malarkey.directive';
 
 declare var malarkey: any;
 declare var moment: moment.MomentStatic;

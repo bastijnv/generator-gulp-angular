@@ -66,11 +66,11 @@ var Generator = module.exports = function Generator() {
   this.options.route = path.join(__dirname, '/templates' ,'/route');*/
 
   var config = {
-    'routeDirectory': this.options.routeDirectory || 'src/app/components/routes/',
-    'directiveDirectory': this.options.directiveDirectory || 'src/app/components/directives/',
-    'filterDirectory': this.options.filterDirectory || 'src/app/components/filters/',
-    'serviceDirectory': this.options.serviceDirectory || 'src/app/components/services/',
-    'basePath': this.options.basePath || 'src/app',
+    'routeDirectory': this.options.routeDirectory || 'app/components/routes/',
+    'directiveDirectory': this.options.directiveDirectory || 'app/components/directives/',
+    'filterDirectory': this.options.filterDirectory || 'app/components/filters/',
+    'serviceDirectory': this.options.serviceDirectory || 'app/components/services/',
+    'basePath': this.options.basePath || 'src/',
     'moduleName': this.options.moduleName || '',
     'modulePrompt':
       this.options.hasOwnProperty('modulePrompt') ?
@@ -89,6 +89,7 @@ var Generator = module.exports = function Generator() {
   };
 
   this.config.defaults(config);
+  this.config.set('basePath', 'src/');  // somehow this variable isn't taken from above, force again.
 };
 
 util.inherits(Generator, yeoman.generators.NamedBase);
