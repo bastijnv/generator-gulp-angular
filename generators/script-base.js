@@ -55,21 +55,12 @@ var Generator = module.exports = function Generator() {
     this.props.props.htmlPreprocessor.extension
   ];
 
-/*  this.options.directiveSimple = path.join(__dirname, '/templates' ,'/directiveSimple');
-  this.options.directiveComplex = path.join(__dirname, '/templates' ,'/directiveComplex');
-  this.options.filter = path.join(__dirname, '/templates' ,'/filter');
-  this.options.service = path.join(__dirname, '/templates' ,'/ervice');
-  this.options.factory = path.join(__dirname, '/templates' ,'/factory');
-  this.options.controller = path.join(__dirname, '/templates' ,'/controller');
-  this.options.decorator = path.join(__dirname, '/templates' ,'/decorator');
-  this.options.provider = path.join(__dirname, '/templates' ,'/provider');
-  this.options.route = path.join(__dirname, '/templates' ,'/route');*/
-
   var config = {
-    'routeDirectory': this.options.routeDirectory || 'app/components/routes/',
-    'directiveDirectory': this.options.directiveDirectory || 'app/components/directives/',
-    'filterDirectory': this.options.filterDirectory || 'app/components/filters/',
-    'serviceDirectory': this.options.serviceDirectory || 'app/components/services/',
+    'routeDirectory': this.options.routeDirectory || 'src/app/components/routes/',
+    'directiveDirectory': this.options.directiveDirectory || 'src/app/components/directives/',
+    'filterDirectory': this.options.filterDirectory || 'src/app/components/filters/',
+    'serviceDirectory': this.options.serviceDirectory || 'src/app/components/services/',
+    'factoryDirectory': this.options.factoryDirectory || 'src/app/components/factories/',
     'basePath': this.options.basePath || 'src/',
     'moduleName': this.options.moduleName || '',
     'modulePrompt':
