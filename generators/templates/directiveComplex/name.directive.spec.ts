@@ -12,7 +12,7 @@ describe('directive <%= cameledName %>', function() {
 
   beforeEach(inject(($compile: angular.ICompileService, $rootScope: angular.IRootScopeService) => {
     element = angular.element(`
-      <<%= cameledName %>></<%= cameledName %>>
+      <<%= lodash.dasherize(name) %>></<%= lodash.dasherize(name) %>>
     `);
 
     $compile(element)($rootScope.$new());
