@@ -56,7 +56,7 @@ var Generator = module.exports = function Generator() {
   ];
 
   var config = {
-    'routeDirectory': this.options.routeDirectory || 'src/app/components/routes/',
+    'routeDirectory': this.options.routeDirectory || 'src/app/',
     'directiveDirectory': this.options.directiveDirectory || 'src/app/components/directives/',
     'filterDirectory': this.options.filterDirectory || 'src/app/components/filters/',
     'serviceDirectory': this.options.serviceDirectory || 'src/app/components/services/',

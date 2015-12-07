@@ -1,6 +1,15 @@
 'use strict';
 
-angular.module('<%= scriptAppName %>')
-  .controller('<%= classedName %>Ctrl', function ($scope) {
-    $scope.message = 'Hello';
-  });
+(function() {
+
+  class <%= classedName %>Controller {
+
+    constructor() {
+      this.message = 'Hello world!';
+    }
+  }
+
+  angular.module('<%= scriptAppName %>')
+    .controller('<%= classedName %>Ctrl', <%= classedName %>Controller);
+
+})();
