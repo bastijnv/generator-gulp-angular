@@ -30,18 +30,12 @@ Generator.prototype.prompting = function askFor() {
     name: 'complex',
     message: 'Does this directive need an external html file?',
     default: true
-  }, {
-    type: 'confirm',
-    name: 'controller',
-    message: 'Does this directive need a controller?',
-    default: true
   }];
 
   this.prompt(prompts, function (props) {
     self.scriptAppName = props.moduleName || self.scriptAppName;
     self.dir = path.join(props.dir, self.name);
     self.complex = props.complex;
-    self.controller = props.controller;
     done();
   });
 };
