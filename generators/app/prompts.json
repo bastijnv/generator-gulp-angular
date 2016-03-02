@@ -138,7 +138,7 @@
           "key": "ui-router",
           "module": "ui.router"
         },
-        "name": "UI Router, flexible routing with nested views"
+        "name": "UI Router, flexible routing with nested views (HSDP preference)"
       },
       {
         "value": {
@@ -168,6 +168,13 @@
     "name": "ui",
     "message": "Which UI framework do you want?",
     "choices": [
+      {
+        "value": {
+          "key": "susy",
+          "module": null
+        },
+        "name": "Susy, a Sass-based grid framework that enables you to create entirely custom grids in CSS without touching your markup (HSDP preference)"
+      },
       {
         "value": {
           "key": "bootstrap",
@@ -285,7 +292,7 @@
           "key": "ruby-sass",
           "extension": "scss"
         },
-        "name": "Sass (Ruby), Original Syntactically Awesome StyleSheets (requires Ruby)"
+        "name": "Sass (Ruby), Original Syntactically Awesome StyleSheets (requires Ruby) (HSDP Preference)"
       },
       {
         "value": {
@@ -353,7 +360,7 @@
           "extension": "ts",
           "srcExtension": "ts"
         },
-        "name": "TypeScript, a typed superset of JavaScript that compiles to plain JavaScript."
+        "name": "TypeScript, a typed superset of JavaScript that compiles to plain JavaScript. (HSDP Preference)"
       }
     ]
   },
@@ -367,7 +374,7 @@
           "key": "noHtmlPrepro",
           "extension": "html"
         },
-        "name": "None, I like to code in standard HTML."
+        "name": "None, I like to code in standard HTML. (HSDP Preference)"
       },
       {
         "value": {
